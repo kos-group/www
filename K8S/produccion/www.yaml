@@ -51,7 +51,7 @@ spec:
                     app: www
       containers:
         - name: www
-          image: ghcr.io/kos-group/www:2
+          image: ghcr.io/kos-group/www:3
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
