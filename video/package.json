@@ -1,0 +1,12 @@
+{
+  "name": "kosgroup-video",
+  "private": true,
+  "type": "module",
+  "description": "Vídeo corporativo de KOS Group: animación HTML/CSS renderizada a MP4/WebM con Playwright + ffmpeg",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.55.0"
+  }
+}

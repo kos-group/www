@@ -17,6 +17,7 @@ site/               HTML + CSS estáticos (sin JavaScript, sin cookies, sin recu
   img/              logo (y su versión pequeña -sm), ilustraciones ill-*.svg, iconos icons.svg (sprite <symbol>)
   media/            vídeo corporativo (kosgroup.mp4/.webm + kosgroup-poster.jpg) cuando exista
   sitemap.xml, robots.txt
+video/              fuente del vídeo corporativo (HTML animado + render.mjs); se renderiza a site/media/
 tools/illustrations.py  genera las ilustraciones isométricas site/img/ill-*.svg (python -I tools/illustrations.py)
 nginx/default.conf  nginx en el 8080: URL limpias, cabeceras de seguridad, apex -> www, /healthz
 Dockerfile          nginxinc/nginx-unprivileged (usuario 101)
