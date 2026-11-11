@@ -42,6 +42,8 @@ jobs:
           curl -fs http://localhost:8080/aviso-legal | grep -q 'Aviso legal'
           curl -fs http://localhost:8080/privacidad | grep -q 'Responsable del tratamiento'
           curl -fs -o /dev/null http://localhost:8080/styles.css
+          curl -fs -o /dev/null http://localhost:8080/img/kosgroup-logo.png
+          curl -fs -o /dev/null http://localhost:8080/favicon.png
           test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/no-existe)" = "404"
           test "$(curl -s -o /dev/null -w '%{redirect_url}' -H 'Host: kosgroup.es' http://localhost:8080/privacidad)" = "https://www.kosgroup.es/privacidad"
           if curl -sI http://localhost:8080/ | grep -qi '^set-cookie'; then echo "La web no debe poner cookies."; exit 1; fi

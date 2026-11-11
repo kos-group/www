@@ -12,7 +12,7 @@ público**: no escribas aquí secretos, IP o nombres de máquinas internas, ni n
 ## Estructura
 
 ```
-site/               HTML + CSS estáticos (sin JavaScript, sin cookies, sin recursos externos)
+site/               HTML + CSS estáticos (sin JavaScript, sin cookies, sin recursos externos); img/ con el logo
 nginx/default.conf  nginx en el 8080: URL limpias, cabeceras de seguridad, apex -> www, /healthz
 Dockerfile          nginxinc/nginx-unprivileged (usuario 101)
 K8S/produccion/     Namespace `kosgroup`, Deployment y Service `www`
@@ -22,6 +22,10 @@ K8S/produccion/     Namespace `kosgroup`, Deployment y Service `www`
 ## Normas
 
 - Textos en español. Commits en inglés; PRs en español. Ramas de ≤ 15 caracteres.
+- Contenido sacado de la presentación corporativa del grupo (sep. 2025). **Sin clientes**: ni nombres, ni logos, ni casos.
+- Logo: `site/img/kosgroup-logo.png`, extraído de esa presentación (PNG con transparencia); el favicon es el símbolo del
+  hexágono recortado del mismo logo. Paleta: **solo los colores del logo** (azul `#1761A0`, gris `#9E9E9E`) y tonos suyos;
+  no uses los colores de la plantilla de la presentación. Sin modo oscuro (el logo es para fondo claro).
 - Sin cookies, analítica ni recursos de terceros (fuentes, CDN): la política de privacidad dice que no los hay. Si se
   añade algo así, hay que cambiar antes la política y el aviso legal.
 - Los datos legales (razón social, CIF, domicilio, contacto) aparecen en el pie de cada página, en `aviso-legal.html`
