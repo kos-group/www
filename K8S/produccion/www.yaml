@@ -1,7 +1,7 @@
 # Web corporativa de KOS Group - produccion (Cluster C). La sincroniza la Application `kosgroup-www` de ArgoCD
 # (Avanware/infra, Clusters/C/argocd/kosgroup-www.yaml). El tag de la imagen lo fija el CI en cada push a main.
 # Traefik (fuera de git) enruta www.kosgroup.es y kosgroup.es al Service `www` de este namespace.
-# Sin secretos: repositorio e imagen publicos.
+# Unico secreto (fuera de git): pull secret `ghcr.io` en el namespace, copiado del de workcheckin.
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -31,6 +31,10 @@ spec:
         app: www
     spec:
       automountServiceAccountToken: false
+      # El paquete de ghcr es privado (por defecto en la org); el secret `ghcr.io` no esta en git:
+      # es copia del del namespace workcheckin. Si el paquete pasa a publico, se puede quitar.
+      imagePullSecrets:
+        - name: ghcr.io
       securityContext:
         # Usuario `nginx` de la imagen nginxinc/nginx-unprivileged.
         runAsNonRoot: true

@@ -33,7 +33,8 @@ K8S/produccion/     Namespace `kosgroup`, Deployment y Service `www`
 
 Push a `main` → el CI publica `ghcr.io/kos-group/www:<run_number>` y fija ese tag en `K8S/produccion/www.yaml`
 (commit `[skip ci]`); la Application `kosgroup-www` de ArgoCD (en el repo `Avanware/infra`, cluster C) lo despliega.
-El enrutado de `www.kosgroup.es` y `kosgroup.es` y el certificado TLS están en la configuración de Traefik del cluster,
+El paquete de ghcr es privado: el namespace `kosgroup` necesita el pull secret `ghcr.io` (fuera de git; se copia del
+namespace `workcheckin`). El enrutado de `www.kosgroup.es` y `kosgroup.es` y el certificado TLS están en la configuración de Traefik del cluster,
 fuera de este repo.
 
 Prueba local: `docker build -t www . && docker run --rm -p 8080:8080 www` y abre http://localhost:8080.
