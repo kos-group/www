@@ -1,0 +1,76 @@
+name: CI
+
+# Push a main: construye la imagen, comprueba que sirve las paginas y publica ghcr.io/kos-group/www:<run_number>;
+# despues fija ese tag en K8S/produccion, que ArgoCD despliega en el cluster C. Los PR solo comprueban la imagen.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "K8S/**"
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "K8S/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docker-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    concurrency:
+      group: docker-image-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: La imagen compila
+        run: docker build -t www:ci .
+
+      - name: La imagen sirve las paginas sin cookies
+        run: |
+          set -euo pipefail
+          docker run -d --name web -p 8080:8080 www:ci
+          for i in $(seq 1 20); do curl -fs http://localhost:8080/healthz && break; sleep 1; done
+          curl -fs http://localhost:8080/ | grep -q 'KEY OUTSOURCING SERVICES GROUP SL'
+          curl -fs http://localhost:8080/aviso-legal | grep -q 'Aviso legal'
+          curl -fs http://localhost:8080/privacidad | grep -q 'Responsable del tratamiento'
+          curl -fs -o /dev/null http://localhost:8080/styles.css
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/no-existe)" = "404"
+          test "$(curl -s -o /dev/null -w '%{redirect_url}' -H 'Host: kosgroup.es' http://localhost:8080/privacidad)" = "https://www.kosgroup.es/privacidad"
+          if curl -sI http://localhost:8080/ | grep -qi '^set-cookie'; then echo "La web no debe poner cookies."; exit 1; fi
+
+      - name: Login en ghcr
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v4.6.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Subir la imagen y fijar el tag en K8S (ArgoCD despliega)
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          tag="${{ github.run_number }}"
+          image="ghcr.io/kos-group/www:${tag}"
+          docker tag www:ci "$image"
+          docker push "$image"
+          file="K8S/produccion/www.yaml"
+          sed -i -E "s#^([[:space:]]*image: ghcr\.io/kos-group/www:).*#\1${tag}#" "$file"
+          if git diff --quiet -- "$file"; then
+            echo "El manifiesto ya apunta a :${tag}."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$file"
+          git commit -m "K8S deploy www:${tag} [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main

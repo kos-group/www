@@ -1,0 +1,97 @@
+# Web corporativa de KOS Group - produccion (Cluster C). La sincroniza la Application `kosgroup-www` de ArgoCD
+# (Avanware/infra, Clusters/C/argocd/kosgroup-www.yaml). El tag de la imagen lo fija el CI en cada push a main.
+# Traefik (fuera de git) enruta www.kosgroup.es y kosgroup.es al Service `www` de este namespace.
+# Sin secretos: repositorio e imagen publicos.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kosgroup
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: www
+  namespace: kosgroup
+  labels:
+    app: www
+spec:
+  revisionHistoryLimit: 2
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: www
+  template:
+    metadata:
+      labels:
+        app: www
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        # Usuario `nginx` de la imagen nginxinc/nginx-unprivileged.
+        runAsNonRoot: true
+        runAsUser: 101
+        runAsGroup: 101
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels:
+                    app: www
+      containers:
+        - name: www
+          image: ghcr.io/kos-group/www:1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 30
+            timeoutSeconds: 3
+            failureThreshold: 3
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: www
+  namespace: kosgroup
+  labels:
+    app: www
+spec:
+  type: ClusterIP
+  selector:
+    app: www
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http
