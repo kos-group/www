@@ -53,7 +53,7 @@ jobs:
           curl -fs -o /dev/null http://localhost:8080/img/ill-hero.svg
           curl -fs -o /dev/null http://localhost:8080/media/kosgroup.mp4
           curl -fs -o /dev/null http://localhost:8080/media/kosgroup-poster.jpg
-          if grep -rEqi 'mailto:|tel:' site/; then echo "La web no debe publicar correo ni telefono."; exit 1; fi
+          if grep -rEqiI 'mailto:|tel:' site/; then echo "La web no debe publicar correo ni telefono."; exit 1; fi
           curl -fs -o /dev/null http://localhost:8080/styles.css
           curl -fs -o /dev/null http://localhost:8080/img/kosgroup-logo.png
           curl -fs -o /dev/null http://localhost:8080/favicon.png

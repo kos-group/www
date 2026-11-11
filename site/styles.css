@@ -28,7 +28,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 96px; }
 
 body {
   margin: 0;
@@ -46,10 +46,12 @@ a { color: var(--blue); text-underline-offset: 3px; }
 a:hover { color: var(--blue-dark); }
 
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--blue);
   outline-offset: 3px;
   border-radius: 4px;
 }
+/* Sobre fondo oscuro (banda y pie) el anillo de foco es naranja: 6,8:1 sobre el marino. */
+.band :focus-visible, footer.site :focus-visible { outline-color: var(--accent); }
 
 h1, h2, h3 { color: var(--navy); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 0.5em; }
 h1 { font-size: clamp(2.1rem, 5.2vw, 3.4rem); font-weight: 800; letter-spacing: -0.025em; }
@@ -256,9 +258,9 @@ a.card:hover, .card.linked:hover { transform: translateY(-3px); box-shadow: var(
 .steps li { counter-increment: step; position: relative; padding: 24px 22px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--gray-line); }
 .steps li::before {
   content: counter(step, decimal-leading-zero); display: block; margin-bottom: 14px;
-  font-size: 2rem; font-weight: 800; line-height: 1; color: var(--blue-light);
+  font-size: 2rem; font-weight: 800; line-height: 1; color: var(--blue);
 }
-.steps li:last-child::before { color: var(--accent); }
+.steps li:last-child::before { color: var(--accent-ink); }
 .steps h3 { margin: 0 0 6px; font-size: 1.1rem; }
 .steps p { margin: 0; color: var(--gray-mute); font-size: 0.97rem; }
 @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -343,3 +345,4 @@ footer.site ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8p
   .card h3 { margin-top: 12px; }
   .cards { gap: 14px; }
 }
+@media (max-width: 560px) { html { scroll-padding-top: 0; } }
