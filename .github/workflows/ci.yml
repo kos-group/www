@@ -41,6 +41,17 @@ jobs:
           curl -fs http://localhost:8080/ | grep -q 'KEY OUTSOURCING SERVICES GROUP SL'
           curl -fs http://localhost:8080/aviso-legal | grep -q 'Aviso legal'
           curl -fs http://localhost:8080/privacidad | grep -q 'Responsable del tratamiento'
+          curl -fs http://localhost:8080/servicios | grep -q 'Business Assurance'
+          curl -fs http://localhost:8080/soluciones | grep -q 'Portame'
+          curl -fs http://localhost:8080/rinc | grep -q 'IVA'
+          curl -fs http://localhost:8080/portame | grep -q 'numeración'
+          curl -fs http://localhost:8080/integra | grep -q 'Orquestador'
+          curl -fs http://localhost:8080/boss | grep -q 'Business Operator Settlement System'
+          curl -fs http://localhost:8080/nosotros | grep -q 'Plaza Doctor Laguna'
+          curl -fs -o /dev/null http://localhost:8080/sitemap.xml
+          curl -fs -o /dev/null http://localhost:8080/img/icons.svg
+          curl -fs -o /dev/null http://localhost:8080/img/ill-hero.svg
+          if grep -rEqi 'mailto:|tel:' site/; then echo "La web no debe publicar correo ni telefono."; exit 1; fi
           curl -fs -o /dev/null http://localhost:8080/styles.css
           curl -fs -o /dev/null http://localhost:8080/img/kosgroup-logo.png
           curl -fs -o /dev/null http://localhost:8080/favicon.png

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Ilustración: servidores, facturas y un gráfico de ingresos al alza">
+<title>Ilustración: servidores, facturas y un gráfico de ingresos al alza</title>
+<defs><radialGradient id="bgfade" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#CFE1F2" stop-opacity="0.9"/><stop offset="1" stop-color="#EAF2FA" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="260" cy="224" rx="244" ry="168" fill="url(#bgfade)"/>
+<polygon points="100.6,196.2 269.9,294.0 269.9,282.5 100.6,184.8" fill="#CFE1F2"/><polygon points="419.3,207.8 269.9,294.0 269.9,282.5 419.3,196.2" fill="#E3E3E3"/><polygon points="250.0,98.5 419.3,196.2 269.9,282.5 100.6,184.8" fill="#FFFFFF"/>
+<polygon points="218.1,135.3 240.0,147.9 240.0,65.1 218.1,52.5" fill="#0B2540"/><polygon points="271.9,129.6 240.0,147.9 240.0,65.1 271.9,46.8" fill="#104A7A"/><polygon points="250.0,34.1 271.9,46.8 240.0,65.1 218.1,52.5" fill="#E3E3E3"/>
+<polygon points="221.1,127.8 237.1,137.0 237.1,134.3 221.1,125.1" fill="#F7931E"/>
+<polygon points="221.1,111.7 237.1,120.9 237.1,118.2 221.1,109.0" fill="#8DB8E0"/>
+<polygon points="221.1,95.6 237.1,104.8 237.1,102.1 221.1,92.9" fill="#8DB8E0"/>
+<polygon points="221.1,79.5 237.1,88.7 237.1,86.0 221.1,76.8" fill="#8DB8E0"/>
+<polygon points="248.0,152.5 269.9,165.2 269.9,96.2 248.0,83.5" fill="#0B2540"/><polygon points="301.8,146.8 269.9,165.2 269.9,96.2 301.8,77.8" fill="#104A7A"/><polygon points="279.9,65.1 301.8,77.8 269.9,96.2 248.0,83.5" fill="#E3E3E3"/>
+<polygon points="251.0,145.1 266.9,154.3 266.9,151.5 251.0,142.3" fill="#F7931E"/>
+<polygon points="251.0,129.0 266.9,138.2 266.9,135.4 251.0,126.2" fill="#8DB8E0"/>
+<polygon points="251.0,112.9 266.9,122.1 266.9,119.3 251.0,110.1" fill="#8DB8E0"/>
+<polygon points="277.9,169.8 299.8,182.4 299.8,127.2 277.9,114.6" fill="#0B2540"/><polygon points="331.7,164.1 299.8,182.4 299.8,127.2 331.7,108.9" fill="#104A7A"/><polygon points="309.8,96.2 331.7,108.9 299.8,127.2 277.9,114.6" fill="#E3E3E3"/>
+<polygon points="280.9,162.3 296.8,171.5 296.8,168.8 280.9,159.6" fill="#F7931E"/>
+<polygon points="280.9,146.2 296.8,155.4 296.8,152.7 280.9,143.5" fill="#8DB8E0"/>
+<polygon points="146.4,185.9 186.3,208.9 186.3,207.1 146.4,184.1" fill="#E3E3E3"/><polygon points="234.1,181.3 186.3,208.9 186.3,207.1 234.1,179.5" fill="#C4C4C4"/><polygon points="194.2,156.5 234.1,179.5 186.3,207.1 146.4,184.1" fill="#FFFFFF"/>
+<polygon points="193.2,162.8 223.1,180.0 220.7,181.4 190.8,164.1" fill="#1761A0"/>
+<polygon points="185.7,167.1 207.6,179.8 205.2,181.2 183.3,168.5" fill="#8DB8E0"/>
+<polygon points="178.1,171.5 208.0,188.8 205.6,190.1 175.7,172.9" fill="#8DB8E0"/>
+<polygon points="170.5,175.9 192.4,188.5 190.0,189.9 168.1,177.3" fill="#F7931E"/>
+<polygon points="146.4,185.9 186.3,208.9 186.3,207.1 146.4,184.1" fill="#E3E3E3"/><polygon points="234.1,181.3 186.3,208.9 186.3,207.1 234.1,179.5" fill="#C4C4C4"/><polygon points="194.2,156.5 234.1,179.5 186.3,207.1 146.4,184.1" fill="#FFFFFF"/>
+<polygon points="193.2,162.8 223.1,180.0 220.7,181.4 190.8,164.1" fill="#1761A0"/>
+<polygon points="185.7,167.1 207.6,179.8 205.2,181.2 183.3,168.5" fill="#8DB8E0"/>
+<polygon points="178.1,171.5 208.0,188.8 205.6,190.1 175.7,172.9" fill="#8DB8E0"/>
+<polygon points="170.5,175.9 192.4,188.5 190.0,189.9 168.1,177.3" fill="#8DB8E0"/>
+<polygon points="255.0,219.8 265.9,226.1 265.9,207.7 255.0,201.4" fill="#1761A0"/><polygon points="276.9,219.8 265.9,226.1 265.9,207.7 276.9,201.4" fill="#104A7A"/><polygon points="265.9,195.1 276.9,201.4 265.9,207.7 255.0,201.4" fill="#8DB8E0"/>
+<polygon points="270.9,229.0 281.9,235.3 281.9,203.1 270.9,196.8" fill="#1761A0"/><polygon points="292.8,229.0 281.9,235.3 281.9,203.1 292.8,196.8" fill="#104A7A"/><polygon points="281.9,190.5 292.8,196.8 281.9,203.1 270.9,196.8" fill="#8DB8E0"/>
+<polygon points="286.8,238.2 297.8,244.5 297.8,196.2 286.8,189.9" fill="#1761A0"/><polygon points="308.8,238.2 297.8,244.5 297.8,196.2 308.8,189.9" fill="#104A7A"/><polygon points="297.8,183.6 308.8,189.9 297.8,196.2 286.8,189.9" fill="#8DB8E0"/>
+<polyline points="270.9,184.2 286.8,179.6 302.8,170.4 313.7,165.2" fill="none" stroke="#F7931E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="313.7" cy="165.2" r="12.0" fill="#F7931E" opacity="0.25"/><circle cx="313.7" cy="165.2" r="6.0" fill="#F7931E"/>
+</svg>

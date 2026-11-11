@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Ilustración: bloques que forman una estructura y una pieza naranja que encaja en su sitio">
+<title>Ilustración: bloques que forman una estructura y una pieza naranja que encaja en su sitio</title>
+<defs><radialGradient id="bgfade" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#CFE1F2" stop-opacity="0.9"/><stop offset="1" stop-color="#EAF2FA" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="260" cy="224" rx="244" ry="168" fill="url(#bgfade)"/>
+<polygon points="114.5,204.0 280.8,300.0 280.8,288.0 114.5,192.0" fill="#CFE1F2"/><polygon points="426.3,216.0 280.8,300.0 280.8,288.0 426.3,204.0" fill="#E3E3E3"/><polygon points="260.0,108.0 426.3,204.0 280.8,288.0 114.5,192.0" fill="#FFFFFF"/>
+<polygon points="260.0,155.5 301.6,179.5 260.0,203.5 218.4,179.5" fill="#F7931E" opacity="0.25"/>
+<polygon points="218.4,156.0 260.0,180.0 260.0,156.0 218.4,132.0" fill="#1761A0"/><polygon points="301.6,156.0 260.0,180.0 260.0,156.0 301.6,132.0" fill="#104A7A"/><polygon points="260.0,108.0 301.6,132.0 260.0,156.0 218.4,132.0" fill="#8DB8E0"/>
+<polygon points="260.0,180.0 301.6,204.0 301.6,180.0 260.0,156.0" fill="#E3E3E3"/><polygon points="343.1,180.0 301.6,204.0 301.6,180.0 343.1,156.0" fill="#C4C4C4"/><polygon points="301.6,132.0 343.1,156.0 301.6,180.0 260.0,156.0" fill="#FFFFFF"/>
+<polygon points="176.9,180.0 218.4,204.0 218.4,180.0 176.9,156.0" fill="#E3E3E3"/><polygon points="260.0,180.0 218.4,204.0 218.4,180.0 260.0,156.0" fill="#C4C4C4"/><polygon points="218.4,132.0 260.0,156.0 218.4,180.0 176.9,156.0" fill="#FFFFFF"/>
+<polygon points="218.4,204.0 260.0,228.0 260.0,204.0 218.4,180.0" fill="#1761A0"/><polygon points="301.6,204.0 260.0,228.0 260.0,204.0 301.6,180.0" fill="#104A7A"/><polygon points="260.0,156.0 301.6,180.0 260.0,204.0 218.4,180.0" fill="#8DB8E0"/>
+<polygon points="218.4,132.0 260.0,156.0 260.0,132.0 218.4,108.0" fill="#E3E3E3"/><polygon points="301.6,132.0 260.0,156.0 260.0,132.0 301.6,108.0" fill="#C4C4C4"/><polygon points="260.0,84.0 301.6,108.0 260.0,132.0 218.4,108.0" fill="#FFFFFF"/>
+<polygon points="260.0,156.0 301.6,180.0 301.6,156.0 260.0,132.0" fill="#8DB8E0"/><polygon points="343.1,156.0 301.6,180.0 301.6,156.0 343.1,132.0" fill="#3C82C4"/><polygon points="301.6,108.0 343.1,132.0 301.6,156.0 260.0,132.0" fill="#CFE1F2"/>
+<polygon points="176.9,156.0 218.4,180.0 218.4,156.0 176.9,132.0" fill="#1761A0"/><polygon points="260.0,156.0 218.4,180.0 218.4,156.0 260.0,132.0" fill="#104A7A"/><polygon points="218.4,108.0 260.0,132.0 218.4,156.0 176.9,132.0" fill="#8DB8E0"/>
+<line x1="260.0" y1="139.2" x2="260.0" y2="175.2" stroke="#F7931E" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 6"/>
+<polygon points="218.4,136.8 260.0,160.8 260.0,136.8 218.4,112.8" fill="#F7931E"/><polygon points="301.6,136.8 260.0,160.8 260.0,136.8 301.6,112.8" fill="#D97706"/><polygon points="260.0,88.8 301.6,112.8 260.0,136.8 218.4,112.8" fill="#FCCB8E"/>
+<polygon points="272.5,249.6 293.3,261.6 293.3,247.2 272.5,235.2" fill="#8DB8E0"/><polygon points="314.0,249.6 293.3,261.6 293.3,247.2 314.0,235.2" fill="#3C82C4"/><polygon points="293.3,223.2 314.0,235.2 293.3,247.2 272.5,235.2" fill="#CFE1F2"/>
+<polygon points="334.8,204.0 359.8,218.4 359.8,180.0 334.8,165.6" fill="#E3E3E3"/><polygon points="384.7,204.0 359.8,218.4 359.8,180.0 384.7,165.6" fill="#C4C4C4"/><polygon points="359.8,151.2 384.7,165.6 359.8,180.0 334.8,165.6" fill="#F4F4F4"/>
+</svg>

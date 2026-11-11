@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Ilustración: dos móviles con una flecha de portabilidad entre ellos y antenas de red">
+<title>Ilustración: dos móviles con una flecha de portabilidad entre ellos y antenas de red</title>
+<defs><radialGradient id="bgfade" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#CFE1F2" stop-opacity="0.9"/><stop offset="1" stop-color="#EAF2FA" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="260" cy="224" rx="244" ry="168" fill="url(#bgfade)"/>
+<polygon points="104.5,204.0 270.8,300.0 270.8,288.0 104.5,192.0" fill="#CFE1F2"/><polygon points="416.3,216.0 270.8,300.0 270.8,288.0 416.3,204.0" fill="#E3E3E3"/><polygon points="250.0,108.0 416.3,204.0 270.8,288.0 104.5,192.0" fill="#FFFFFF"/>
+<polygon points="247.9,142.8 258.3,148.8 258.3,86.4 247.9,80.4" fill="#C4C4C4"/><polygon points="268.7,142.8 258.3,148.8 258.3,86.4 268.7,80.4" fill="#9E9E9E"/><polygon points="258.3,74.4 268.7,80.4 258.3,86.4 247.9,80.4" fill="#E3E3E3"/>
+<circle cx="258.3" cy="75.6" r="10.0" fill="#8DB8E0" opacity="0.25"/><circle cx="258.3" cy="75.6" r="5.0" fill="#1761A0"/>
+<polygon points="272.9,166.8 287.4,175.2 287.4,166.8 272.9,158.4" fill="#8DB8E0"/><polygon points="302.0,166.8 287.4,175.2 287.4,166.8 302.0,158.4" fill="#3C82C4"/><polygon points="287.4,150.0 302.0,158.4 287.4,166.8 272.9,158.4" fill="#CFE1F2"/>
+<polygon points="291.6,177.6 306.1,186.0 306.1,171.6 291.6,163.2" fill="#8DB8E0"/><polygon points="320.7,177.6 306.1,186.0 306.1,171.6 320.7,163.2" fill="#3C82C4"/><polygon points="306.1,154.8 320.7,163.2 306.1,171.6 291.6,163.2" fill="#CFE1F2"/>
+<polygon points="310.3,188.4 324.8,196.8 324.8,176.4 310.3,168.0" fill="#8DB8E0"/><polygon points="339.4,188.4 324.8,196.8 324.8,176.4 339.4,168.0" fill="#3C82C4"/><polygon points="324.8,159.6 339.4,168.0 324.8,176.4 310.3,168.0" fill="#CFE1F2"/>
+<polygon points="335.2,198.0 345.6,204.0 345.6,141.6 335.2,135.6" fill="#C4C4C4"/><polygon points="356.0,198.0 345.6,204.0 345.6,141.6 356.0,135.6" fill="#9E9E9E"/><polygon points="345.6,129.6 356.0,135.6 345.6,141.6 335.2,135.6" fill="#E3E3E3"/>
+<circle cx="345.6" cy="130.8" r="10.0" fill="#8DB8E0" opacity="0.25"/><circle cx="345.6" cy="130.8" r="5.0" fill="#1761A0"/>
+<polygon points="179.3,172.8 206.4,188.4 206.4,128.4 179.3,112.8" fill="#1761A0"/><polygon points="210.5,186.0 206.4,188.4 206.4,128.4 210.5,126.0" fill="#104A7A"/><polygon points="183.5,110.4 210.5,126.0 206.4,128.4 179.3,112.8" fill="#C4C4C4"/>
+<polygon points="181.8,168.2 203.9,181.0 203.9,133.0 181.8,120.2" fill="#EAF2FA"/>
+<polygon points="266.6,223.2 293.6,238.8 293.6,178.8 266.6,163.2" fill="#0B2540"/><polygon points="297.8,236.4 293.6,238.8 293.6,178.8 297.8,176.4" fill="#104A7A"/><polygon points="270.8,160.8 297.8,176.4 293.6,178.8 266.6,163.2" fill="#C4C4C4"/>
+<polygon points="269.1,218.6 291.2,231.4 291.2,183.4 269.1,170.6" fill="#EAF2FA"/>
+<polygon points="185.6,130.8 196.0,136.8 196.0,132.5 185.6,126.5" fill="#8DB8E0"/>
+<polygon points="185.6,141.6 200.1,150.0 200.1,145.7 185.6,137.3" fill="#8DB8E0"/>
+<polygon points="185.6,152.4 200.1,160.8 200.1,156.5 185.6,148.1" fill="#8DB8E0"/>
+<polygon points="272.9,181.2 283.3,187.2 283.3,182.9 272.9,176.9" fill="#F7931E"/>
+<polygon points="272.9,192.0 287.4,200.4 287.4,196.1 272.9,187.7" fill="#8DB8E0"/>
+<polygon points="272.9,202.8 287.4,211.2 287.4,206.9 272.9,198.5" fill="#8DB8E0"/>
+<path d="M193.9,104.4 Q237.5,14.4 275.2,144.8" fill="none" stroke="#F7931E" stroke-width="5" stroke-linecap="round"/><path d="M259.2,132.8 l16,12 l-16,10" fill="none" stroke="#F7931E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
