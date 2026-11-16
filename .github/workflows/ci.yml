@@ -8,11 +8,6 @@ on:
     paths-ignore:
       - "**/*.md"
       - "K8S/**"
-  pull_request:
-    branches: [main]
-    paths-ignore:
-      - "**/*.md"
-      - "K8S/**"
   workflow_dispatch:
 
 permissions:
